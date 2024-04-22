@@ -5,6 +5,8 @@
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
+\usepackage{cite} % This package allows you to use the \cite{} command to site references
+
 \title{Simple Sample} % Sets article title
 \author{My Name} % Sets authors name
 \date{\today} % Sets date for date compiled
@@ -17,7 +19,7 @@
 
     \textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
      \LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-     . I can also give equations their own space:
+     I can also give equations their own space:
     \begin{equation} % Creates an equation environment and is compiled as math
     \gamma^2+\theta^2=\omega^2
     \end{equation}
@@ -26,5 +28,9 @@
      \LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
 
     For a new paragraph I can leave a blank space in my code.
+
+    \LaTeX{} \cite{latex2e} is a set of macros built atop \TeX{} \cite{texbook}.
+    \bibliographystyle{plain} % We choose the "plain" reference style
+    \bibliography{refs} % Entries are in the refs.bib file
 
 \end{document} % This is the end of the document
