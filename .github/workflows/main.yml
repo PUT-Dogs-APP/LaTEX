@@ -31,17 +31,8 @@ jobs:
           name: PDF
           path: .
 
-      - name: Create tag
-        id: tag
-        run: echo ::set-output name=tag::$(date +'%Y%m%d%H%M%S')
-
-      - name: Set ref
-        id: ref
-        run: echo ::set-output name=ref::refs/tags/${{ steps.tag.outputs.tag }}
-
       - name: Release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             thesis.pdf
